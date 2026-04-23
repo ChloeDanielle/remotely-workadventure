@@ -478,8 +478,8 @@
                  "type":"",
                  "visible":true,
                  "width":310,
-                 "x":1030,
-                 "y":457
+                 "x":1032,
+                 "y":464
                 }, 
                 {
                  "height":98,
@@ -598,7 +598,7 @@
          "y":0
         }],
  "nextlayerid":64,
- "nextobjectid":25,
+ "nextobjectid":26,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -771,9 +771,18 @@
          "tilewidth":32
         }, 
         {
-         "firstgid":2956,
-         "source":"tilesets\/Remotely Philippines Logo.tsx"
-        }],
+          "columns":33,
+          "firstgid":2956,
+          "image":"tilesets\/RemotelyLogo.png",
+          "imageheight":361,
+          "imagewidth":1081,
+          "margin":0,
+          "name":"Remotely Philippines Logo",
+          "spacing":0,
+          "tilecount":363,
+          "tileheight":32,
+          "tilewidth":32
+         }],
  "tilewidth":32,
  "type":"map",
  "version":"1.10",
