@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloe's WorkAdventure Maps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d0d1a;
+            --primary: #ff00ff; /* Neon pink */
+            --secondary: #00ffff; /* Neon cyan */
+            --tertiary: #00ff00; /* Neon green */
+        }
+        body {
+            background-color: var(--bg-color);
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: 
+                linear-gradient(rgba(13, 13, 26, 0.8), rgba(13, 13, 26, 0.8)),
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 0, 255, 0.1) 2px, rgba(255, 0, 255, 0.1) 4px);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .crt-effect {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+            z-index: 100;
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            text-shadow: 2px 2px 0px var(--secondary), -2px -2px 0px var(--tertiary), 0 0 20px rgba(255, 0, 255, 0.5);
+            animation: glitch 1.5s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px 0px var(--secondary), -2px -2px 0px var(--tertiary); }
+            20% { text-shadow: -2px 2px 0px var(--secondary), 2px -2px 0px var(--tertiary); }
+            40% { text-shadow: 2px -2px 0px var(--secondary), -2px 2px 0px var(--tertiary); }
+            60% { text-shadow: -2px -2px 0px var(--secondary), 2px 2px 0px var(--tertiary); }
+            80% { text-shadow: 2px 2px 0px var(--secondary), -2px -2px 0px var(--tertiary); }
+            100% { text-shadow: -2px 2px 0px var(--secondary), 2px -2px 0px var(--tertiary); }
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #ccc;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .map-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--secondary);
+            border-radius: 15px;
+            padding: 2rem;
+            width: 250px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), inset 0 0 15px rgba(0, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-card::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+
+        .map-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: var(--primary);
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.4), inset 0 0 20px rgba(255, 0, 255, 0.2);
+        }
+
+        .map-card:hover::before {
+            opacity: 1;
+            transform: rotate(0deg);
+        }
+
+        .map-card h2 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.2rem;
+            margin: 0 0 1rem 0;
+            color: var(--secondary);
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            transition: color 0.3s ease;
+        }
+
+        .map-card:hover h2 {
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+        }
+
+        .map-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        .map-card .btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid var(--secondary);
+            color: var(--secondary);
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .map-card:hover .btn {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="crt-effect"></div>
+    <h1>SELECT MAP</h1>
+    <p class="subtitle">Welcome to Chloe's WorkAdventure space. Choose a destination to enter the virtual environment.</p>
+    
+    <div class="cards-container">
+        <a href="https://play.workadventu.re/_/global/chloedanielle.github.io/remotely-workadventure/office.tmj" class="map-card">
+            <h2>OFFICE</h2>
+            <p>The main headquarters. Meet, collaborate, and work together in our virtual office.</p>
+            <div class="btn">JOIN -></div>
+        </a>
+        
+        <a href="https://play.workadventu.re/_/global/chloedanielle.github.io/remotely-workadventure/conference.tmj" class="map-card">
+            <h2>MEETING</h2>
+            <p>The conference room. Perfect for team standups, presentations, and quiet discussions.</p>
+            <div class="btn">JOIN -></div>
+        </a>
+    </div>
+</body>
+</html>
