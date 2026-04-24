@@ -3,67 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chloe's WorkAdventure Maps</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Remotely Philippines Virtual Workspace Office</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0d0d1a;
-            --primary: #ff00ff; /* Neon pink */
-            --secondary: #00ffff; /* Neon cyan */
-            --tertiary: #00ff00; /* Neon green */
+            --primary: #059669; /* Elegant Green */
+            --primary-dark: #047857;
+            --primary-light: #d1fae5;
+            --bg-color: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
         }
+
         body {
+            font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
-            color: #fff;
-            font-family: 'Orbitron', sans-serif;
+            color: var(--text-main);
             margin: 0;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-image: 
-                linear-gradient(rgba(13, 13, 26, 0.8), rgba(13, 13, 26, 0.8)),
-                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 0, 255, 0.1) 2px, rgba(255, 0, 255, 0.1) 4px);
-            overflow: hidden;
-            position: relative;
+            background-image: radial-gradient(circle at top right, var(--primary-light), transparent 40%),
+                              radial-gradient(circle at bottom left, var(--primary-light), transparent 40%);
+            background-attachment: fixed;
+            padding: 2rem;
+            box-sizing: border-box;
         }
-        
-        .crt-effect {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            pointer-events: none;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-            background-size: 100% 2px, 3px 100%;
-            z-index: 100;
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .logo {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         h1 {
-            font-family: 'Press Start 2P', cursive;
             font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--primary);
-            text-shadow: 2px 2px 0px var(--secondary), -2px -2px 0px var(--tertiary), 0 0 20px rgba(255, 0, 255, 0.5);
-            animation: glitch 1.5s infinite;
+            font-weight: 800;
+            color: var(--text-main);
+            margin: 0 0 1rem 0;
+            letter-spacing: -0.025em;
         }
 
-        @keyframes glitch {
-            0% { text-shadow: 2px 2px 0px var(--secondary), -2px -2px 0px var(--tertiary); }
-            20% { text-shadow: -2px 2px 0px var(--secondary), 2px -2px 0px var(--tertiary); }
-            40% { text-shadow: 2px -2px 0px var(--secondary), -2px 2px 0px var(--tertiary); }
-            60% { text-shadow: -2px -2px 0px var(--secondary), 2px 2px 0px var(--tertiary); }
-            80% { text-shadow: 2px 2px 0px var(--secondary), -2px -2px 0px var(--tertiary); }
-            100% { text-shadow: -2px 2px 0px var(--secondary), 2px -2px 0px var(--tertiary); }
+        h1 span {
+            color: var(--primary);
         }
 
         .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            color: #ccc;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-            text-align: center;
+            font-size: 1.125rem;
+            color: var(--text-muted);
             max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 300;
         }
 
         .cards-container {
@@ -71,107 +79,160 @@
             gap: 2rem;
             flex-wrap: wrap;
             justify-content: center;
-            z-index: 10;
+            width: 100%;
+            max-width: 1000px;
+            animation: fadeInUp 1s ease-out 0.3s backwards;
         }
 
         .map-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid var(--secondary);
-            border-radius: 15px;
-            padding: 2rem;
-            width: 250px;
-            text-align: center;
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 2.5rem;
+            width: 280px;
+            text-align: left;
             text-decoration: none;
-            color: white;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), inset 0 0 15px rgba(0, 255, 255, 0.1);
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            color: var(--text-main);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
         }
 
         .map-card::before {
             content: '';
             position: absolute;
-            top: -50%; left: -50%; width: 200%; height: 200%;
-            background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
-            transform: rotate(45deg);
-            transition: all 0.5s ease;
-            opacity: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
         }
 
         .map-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            border-color: var(--primary);
-            box-shadow: 0 0 30px rgba(255, 0, 255, 0.4), inset 0 0 20px rgba(255, 0, 255, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: transparent;
         }
 
         .map-card:hover::before {
-            opacity: 1;
-            transform: rotate(0deg);
+            transform: scaleX(1);
+        }
+
+        .icon-container {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
         }
 
         .map-card h2 {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 600;
             margin: 0 0 1rem 0;
-            color: var(--secondary);
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            color: var(--text-main);
             transition: color 0.3s ease;
         }
 
-        .map-card:hover h2 {
-            color: var(--primary);
-            text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
-        }
-
         .map-card p {
-            font-size: 0.9rem;
+            font-size: 1rem;
             line-height: 1.5;
-            opacity: 0.8;
-            margin: 0;
+            color: var(--text-muted);
+            margin: 0 0 2rem 0;
+            flex-grow: 1;
         }
 
         .map-card .btn {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 0.5rem 1rem;
-            background: transparent;
-            border: 1px solid var(--secondary);
-            color: var(--secondary);
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1.25rem;
+            background: var(--bg-color);
+            border: none;
+            border-radius: 10px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
             transition: all 0.3s ease;
+            width: max-content;
+        }
+
+        .map-card .btn svg {
+            width: 20px;
+            height: 20px;
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
         }
 
         .map-card:hover .btn {
             background: var(--primary);
-            border-color: var(--primary);
-            color: #fff;
-            box-shadow: 0 0 10px var(--primary);
+            color: #ffffff;
         }
 
+        .map-card:hover .btn svg {
+            transform: translateX(5px);
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .cards-container { flex-direction: column; align-items: center; }
+            .map-card { width: 100%; max-width: 350px; }
+        }
     </style>
 </head>
 <body>
-    <div class="crt-effect"></div>
-    <h1>SELECT MAP</h1>
-    <p class="subtitle">Welcome to Chloe's WorkAdventure space. Choose a destination to enter the virtual environment.</p>
+
+    <div class="header">
+        <img src="./assets/RemotelyLogo-DpY-pQ6D.png" alt="Remotely Philippines Logo" class="logo">
+        <h1>Remotely Philippines <br><span>Virtual Workspace Office</span></h1>
+        <p class="subtitle">Welcome to our digital headquarters. Step inside to collaborate, connect, and thrive in our immersive remote environment.</p>
+    </div>
     
     <div class="cards-container">
         <a href="https://play.workadventu.re/_/global/chloedanielle.github.io/remotely-workadventure/office.tmj" class="map-card">
-            <h2>OFFICE</h2>
-            <p>The main headquarters. Meet, collaborate, and work together in our virtual office.</p>
-            <div class="btn">JOIN -></div>
+            <div class="icon-container">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            </div>
+            <h2>Main Office</h2>
+            <p>The central hub. Meet your colleagues, brainstorm at desks, and work together seamlessly.</p>
+            <div class="btn">
+                Enter Space
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </div>
         </a>
         
         <a href="https://play.workadventu.re/_/global/chloedanielle.github.io/remotely-workadventure/conference.tmj" class="map-card">
-            <h2>MEETING</h2>
-            <p>The conference room. Perfect for team standups, presentations, and quiet discussions.</p>
-            <div class="btn">JOIN -></div>
+            <div class="icon-container">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+            </div>
+            <h2>Conference Room</h2>
+            <p>Dedicated area for team standups, important presentations, and focused group discussions.</p>
+            <div class="btn">
+                Enter Space
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </div>
         </a>
     </div>
+
 </body>
 </html>
