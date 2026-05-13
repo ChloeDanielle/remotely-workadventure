@@ -14,9 +14,9 @@
 // "To Email" field. No need to pass it as a variable.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY  = 'rbqJtmUl8wxT0KuHz';
+const EMAILJS_SERVICE_ID  = 'service_00o6c8h';
+const EMAILJS_TEMPLATE_ID = 'template_a1e8m79';
 
 /**
  * Loads the EmailJS SDK and sends an account-request notification.

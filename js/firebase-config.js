@@ -9,12 +9,12 @@ import { getAuth }       from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getFirestore }  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-    apiKey:            "YOUR_API_KEY",
-    authDomain:        "YOUR_AUTH_DOMAIN",
-    projectId:         "YOUR_PROJECT_ID",
-    storageBucket:     "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId:             "YOUR_APP_ID"
+    apiKey:            "AIzaSyDE2KESYfOWRu8j5TIooC3_w9bZ3ahuxKM",
+    authDomain:        "remotely-workspace.firebaseapp.com",
+    projectId:         "remotely-workspace",
+    storageBucket:     "remotely-workspace.firebasestorage.app",
+    messagingSenderId: "139050398295",
+    appId:             "1:139050398295:web:31cf5ff074b3782594e912"
 };
 
 export const app  = initializeApp(firebaseConfig);
