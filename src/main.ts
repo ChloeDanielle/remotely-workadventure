@@ -9,7 +9,7 @@ let currentPopup: any = undefined;
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     console.info('Scripting API ready');
-    console.info('Player tags: ',WA.player.tags)
+    console.info('Player tags: ', WA.player.tags)
 
     WA.room.area.onEnter('clock').subscribe(() => {
         const today = new Date();
@@ -22,15 +22,15 @@ WA.onInit().then(() => {
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.info('Scripting API Extra ready');
-    }).catch(e => console.error(e));
+    }).catch((e: unknown) => console.error(e));
 
-}).catch(e => console.error(e));
+}).catch((e: unknown) => console.error(e));
 
-function closePopup(){
+function closePopup() {
     if (currentPopup !== undefined) {
         currentPopup.close();
         currentPopup = undefined;
     }
 }
 
-export {};
+export { };
