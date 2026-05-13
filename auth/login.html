@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In — Remotely Philippines</title>
+    <meta name="description" content="Sign in to Remotely Philippines Virtual Workspace.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="auth-header">
+        <img src="../tilesets/RemotelyLogo.png" alt="Remotely Philippines Logo" class="logo">
+    </div>
+
+    <!-- Card -->
+    <div class="auth-card">
+        <h1>Welcome <span>Back</span></h1>
+        <p class="subtitle">Sign in to access the Remotely Philippines Virtual Workspace.</p>
+
+        <form id="login-form" novalidate>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="e.g. Juan4821@remotely"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                    <button type="button" class="toggle-password" id="toggle-pw" aria-label="Toggle password visibility">
+                        <!-- Eye icon (shown when password is hidden) -->
+                        <svg id="icon-show" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7
+                                   -1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                        <!-- Eye-off icon (shown when password is visible) -->
+                        <svg id="icon-hide" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display:none">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7
+                                   a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243
+                                   M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29
+                                   M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7
+                                   a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary" id="submit-btn">
+                Sign In
+            </button>
+
+        </form>
+
+        <!-- Status messages -->
+        <div class="status-msg" id="status-msg" role="alert" aria-live="polite"></div>
+    </div>
+
+    <!-- Footer -->
+    <p class="auth-footer">
+        Don't have an account? <a href="signup.html">Request access</a>
+    </p>
+
+    <script type="module">
+        import { signInWithUsername, redirectIfLoggedIn } from '../js/auth.js';
+
+        // If already logged in + approved, go straight to the app
+        redirectIfLoggedIn();
+
+        const form      = document.getElementById('login-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const statusMsg = document.getElementById('status-msg');
+        const pwInput   = document.getElementById('password');
+        const toggleBtn = document.getElementById('toggle-pw');
+        const iconShow  = document.getElementById('icon-show');
+        const iconHide  = document.getElementById('icon-hide');
+
+        // Show / hide password toggle
+        toggleBtn.addEventListener('click', () => {
+            const isHidden = pwInput.type === 'password';
+            pwInput.type   = isHidden ? 'text' : 'password';
+            iconShow.style.display = isHidden ? 'none'  : '';
+            iconHide.style.display = isHidden ? ''      : 'none';
+        });
+
+        function showStatus(message, type) {
+            statusMsg.textContent = message;
+            statusMsg.className   = `status-msg show ${type}`;
+        }
+
+        function setLoading(loading) {
+            if (loading) {
+                submitBtn.disabled  = true;
+                submitBtn.innerHTML = '<span class="spinner"></span> Signing in…';
+            } else {
+                submitBtn.disabled  = false;
+                submitBtn.textContent = 'Sign In';
+            }
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            statusMsg.className = 'status-msg';   // hide previous
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+
+            if (!username) {
+                showStatus('Please enter your username.', 'error');
+                document.getElementById('username').focus();
+                return;
+            }
+            if (!password) {
+                showStatus('Please enter your password.', 'error');
+                pwInput.focus();
+                return;
+            }
+
+            setLoading(true);
+
+            try {
+                await signInWithUsername(username, password);
+                // Success — redirect to app
+                window.location.href = '../index.html';
+            } catch (err) {
+                if (err.message === 'pending') {
+                    showStatus('Your account is pending approval. Please wait for admin confirmation.', 'warning');
+                } else {
+                    showStatus(err.message || 'An unexpected error occurred. Please try again.', 'error');
+                }
+            } finally {
+                setLoading(false);
+            }
+        });
+    </script>
+
+</body>
+</html>

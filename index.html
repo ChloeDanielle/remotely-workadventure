@@ -8,6 +8,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
+        /* Sign-out button — top-right corner */
+        .signout-bar {
+            position: fixed;
+            top: 1rem;
+            right: 1.25rem;
+            z-index: 100;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        .signout-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            background: #ffffff;
+            border: 1.5px solid rgba(0,0,0,0.08);
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        .signout-btn:hover {
+            color: #ef4444;
+            border-color: #fecaca;
+            box-shadow: 0 4px 12px rgba(239,68,68,0.12);
+        }
+    </style>
+    <style>
         :root {
             --primary: #059669; /* Elegant Green */
             --primary-dark: #047857;
@@ -201,6 +232,28 @@
     </style>
 </head>
 <body>
+
+    <!-- Auth guard: redirects to login if not authenticated -->
+    <script type="module">
+        import { requireAuth } from './js/auth.js';
+        requireAuth();
+    </script>
+
+    <!-- Sign-out button -->
+    <div class="signout-bar">
+        <button class="signout-btn" id="signout-btn" title="Sign out">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1"/>
+            </svg>
+            Sign Out
+        </button>
+    </div>
+
+    <script type="module">
+        import { signOutUser } from './js/auth.js';
+        document.getElementById('signout-btn').addEventListener('click', () => signOutUser());
+    </script>
 
     <div class="header">
         <img src="tilesets/RemotelyLogo.png" alt="Remotely Philippines Logo" class="logo">
