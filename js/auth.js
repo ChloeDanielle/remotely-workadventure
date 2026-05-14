@@ -122,27 +122,25 @@ export async function requestAccount(fullName, department) {
  * @throws {Error} with a human-readable message
  */
 export async function signInWithUsername(username, password) {
-    // 1. Look up user document by username field
-    const q = query(collection(db, 'users'), where('username', '==', username));
-    const snapshot = await getDocs(q);
+    const email = usernameToEmail(username);
 
-    if (snapshot.empty) {
-        throw new Error('Incorrect username or password.');
-    }
-
-    const userDoc  = snapshot.docs[0];
-    const userData = userDoc.data();
-    const email    = userData.email;
-
-    // 2. Sign in via Firebase Auth
+    // 1. Sign in via Firebase Auth
     try {
         await signInWithEmailAndPassword(auth, email, password);
     } catch (err) {
         throw new Error('Incorrect username or password.');
     }
 
-    // 3. Re-fetch Firestore document to check approval status
-    const freshDoc = await getDoc(doc(db, 'users', userDoc.id));
+    // 2. Fetch Firestore document to check approval status
+    // The user is now authenticated, so they have permission to read their own document.
+    const user = auth.currentUser;
+    const freshDoc = await getDoc(doc(db, 'users', user.uid));
+    
+    if (!freshDoc.exists()) {
+        await signOut(auth);
+        throw new Error('Incorrect username or password.');
+    }
+    
     const freshData = freshDoc.data();
 
     if (!freshData.approved) {
@@ -150,7 +148,7 @@ export async function signInWithUsername(username, password) {
         throw new Error('pending');   // caller shows the pending-approval message
     }
 
-    // 4. Approved → caller should redirect to index.html
+    // 3. Approved → caller should redirect to index.html
 }
 
 // ── Sign Out ──────────────────────────────────────────────────────────────────
