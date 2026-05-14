@@ -1,15 +1,15 @@
 /* auth.css — inherits the design language from index.html */
 
 :root {
-    --primary: #059669;
-    --primary-dark: #047857;
+    --primary: #107A3E;
+    --primary-dark: #1E6131;
     --primary-light: #d1fae5;
     --bg-color: #f8fafc;
-    --text-main: #0f172a;
-    --text-muted: #64748b;
+    --text-main: #000000;
+    --text-muted: #012A36;
     --card-bg: #ffffff;
     --error: #ef4444;
-    --success: #059669;
+    --success: #107A3E;
     --warning: #f59e0b;
 }
 
