@@ -84,6 +84,7 @@ export async function requestAccount(fullName, department) {
             department: department.trim(),
             username,
             email,
+            password:   password, // Saved here as a fallback in case EmailJS fails
             createdAt:  serverTimestamp(),
             approved:   false,
         });
