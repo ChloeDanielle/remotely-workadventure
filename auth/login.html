@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In — Remotely Philippines</title>
+    <meta name="description" content="Sign in to Remotely Philippines Virtual Workspace.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="../assets/login-Bawd4C-g.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/auth-L1yvf4tF.js">
+  <link rel="stylesheet" crossorigin href="../assets/auth-WHmfOHra.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="auth-header">
+        <img src="../assets/RemotelyLogo-DpY-pQ6D.png" alt="Remotely Philippines Logo" class="logo">
+    </div>
+
+    <!-- Card -->
+    <div class="auth-card">
+        <h1>Welcome <span>Back</span></h1>
+        <p class="subtitle">Sign in to access the Remotely Philippines Virtual Workspace.</p>
+
+        <form id="login-form" novalidate>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="e.g. Juan4821@remotely"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                    <button type="button" class="toggle-password" id="toggle-pw" aria-label="Toggle password visibility">
+                        <!-- Eye icon (shown when password is hidden) -->
+                        <svg id="icon-show" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7
+                                   -1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                        <!-- Eye-off icon (shown when password is visible) -->
+                        <svg id="icon-hide" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display:none">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7
+                                   a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243
+                                   M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29
+                                   M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7
+                                   a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary" id="submit-btn">
+                Sign In
+            </button>
+
+        </form>
+
+        <!-- Status messages -->
+        <div class="status-msg" id="status-msg" role="alert" aria-live="polite"></div>
+    </div>
+
+    <!-- Footer -->
+    <p class="auth-footer">
+        Don't have an account? <a href="signup.html">Request access</a>
+    </p>
+
+
+</body>
+</html>

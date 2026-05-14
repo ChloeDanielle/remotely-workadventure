@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Account — Remotely Philippines</title>
+    <meta name="description" content="Request a Remotely Philippines Virtual Workspace account.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="../assets/signup-BD3RWxUq.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/auth-L1yvf4tF.js">
+  <link rel="stylesheet" crossorigin href="../assets/auth-WHmfOHra.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="auth-header">
+        <a href="../index.html">
+            <img src="../assets/RemotelyLogo-DpY-pQ6D.png" alt="Remotely Philippines Logo" class="logo">
+        </a>
+    </div>
+
+    <!-- Card -->
+    <div class="auth-card">
+        <h1>Request <span>Account</span></h1>
+        <p class="subtitle">Fill in your details and we'll set you up once your request is reviewed.</p>
+
+        <form id="signup-form" novalidate>
+
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input
+                    type="text"
+                    id="full-name"
+                    name="full-name"
+                    placeholder="e.g. Juan dela Cruz"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department</label>
+                <div class="select-wrapper">
+                    <select id="department" name="department" required>
+                        <option value="" disabled selected>Select your department</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Design">Design</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Operations">Operations</option>
+                        <option value="HR">HR</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Customer Support">Customer Support</option>
+                        <option value="IT">IT</option>
+                        <option value="Management">Management</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary" id="submit-btn">
+                Request Account
+            </button>
+
+        </form>
+
+        <!-- Status messages -->
+        <div class="status-msg" id="status-msg" role="alert" aria-live="polite"></div>
+    </div>
+
+    <!-- Footer -->
+    <p class="auth-footer">
+        Already have an account? <a href="login.html">Sign in</a>
+    </p>
+
+
+</body>
+</html>
