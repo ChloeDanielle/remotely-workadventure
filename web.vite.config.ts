@@ -29,6 +29,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 index: "./index.html",
+                login: "./auth/login.html",
+                signup: "./auth/signup.html",
                 ...getMapsScripts(maps),
             },
         },
