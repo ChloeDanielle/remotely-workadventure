@@ -154,9 +154,9 @@ export async function signInWithUsername(username, password) {
 
 // ── Sign Out ──────────────────────────────────────────────────────────────────
 
-export async function signOutUser() {
+export async function signOutUser(loginPath = './auth/login.html') {
     await signOut(auth);
-    window.location.href = '../auth/login.html';
+    window.location.href = loginPath;
 }
 
 // ── Route Guard ───────────────────────────────────────────────────────────────
@@ -169,10 +169,10 @@ export async function signOutUser() {
  *   import { requireAuth } from '../js/auth.js';
  *   requireAuth();
  */
-export function requireAuth() {
+export function requireAuth(loginPath = './auth/login.html') {
     onAuthStateChanged(auth, async (user) => {
         if (!user) {
-            window.location.href = '../auth/login.html';
+            window.location.href = loginPath;
             return;
         }
 
@@ -181,12 +181,12 @@ export function requireAuth() {
             const snap = await getDoc(doc(db, 'users', user.uid));
             if (!snap.exists() || !snap.data().approved) {
                 await signOut(auth);
-                window.location.href = '../auth/login.html';
+                window.location.href = loginPath;
             }
             // Approved — stay on the page
         } catch {
             await signOut(auth);
-            window.location.href = '../auth/login.html';
+            window.location.href = loginPath;
         }
     });
 }
