@@ -144,6 +144,44 @@
         "Z:/GIT/RPH/WA/tileset 1.tsx": {
             "scaleInDock": 1
         },
+        "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 409.99999999999994,
+                "y": 309.33333333333326
+            }
+        },
+        "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj#WA_Decoration": {
+            "scaleInDock": 1
+        },
+        "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj#WA_Exterior": {
+            "scaleInDock": 1
+        },
+        "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj#WA_Logo_Long": {
+            "scaleInDock": 1
+        },
+        "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj#WA_Miscellaneous": {
+            "scaleInDock": 1
+        },
+        "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj#WA_Other_Furniture": {
+            "scaleInDock": 1
+        },
+        "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj#WA_Room_Builder": {
+            "scaleInDock": 1
+        },
+        "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj#WA_Seats": {
+            "scaleInDock": 1
+        },
+        "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj#WA_Special_Zones": {
+            "scaleInDock": 1
+        },
+        "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj#WA_Tables": {
+            "scaleInDock": 1
+        },
+        "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj#WA_User_Interface": {
+            "scaleInDock": 1
+        },
         "Z:/GIT/remotely-workadventure/Wall.tsx": {
             "scaleInDock": 1
         },
@@ -257,11 +295,15 @@
             "scaleInDock": 1
         },
         "Z:/GIT/remotely-workadventure/office.tmj": {
-            "scale": 0.4923883928571428,
-            "selectedLayer": 1,
+            "expandedGroupLayers": [
+                54,
+                52
+            ],
+            "scale": 0.5,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 1120.0507729271499,
-                "y": 800.1813318826783
+                "x": 2023,
+                "y": 698
             }
         },
         "Z:/GIT/remotely-workadventure/office.tmj#Assets": {
@@ -316,6 +358,15 @@
             "scaleInDock": 1
         },
         "Z:/GIT/remotely-workadventure/office.tmj#WA_User_Interface": {
+            "scaleInDock": 1
+        },
+        "Z:/GIT/remotely-workadventure/office.tmj#Wall": {
+            "scaleInDock": 1
+        },
+        "Z:/GIT/remotely-workadventure/office.tmj#outdoor1": {
+            "scaleInDock": 1
+        },
+        "Z:/GIT/remotely-workadventure/office.tmj#tileset 1": {
             "scaleInDock": 1
         },
         "Z:/GIT/remotely-workadventure/office3.tmj": {
@@ -435,10 +486,11 @@
     ],
     "project": "revamp.tiled-project",
     "recentFiles": [
+        "Z:/GIT/remotely-workadventure/office.tmj",
+        "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj",
         "Z:/GIT/remotely-workadventure/tileset 1.tsx",
         "Z:/GIT/remotely-workadventure/office3.tmj",
         "Z:/GIT/RPH/WA/office2.tmj",
-        "Z:/GIT/remotely-workadventure/office.tmj",
         "Z:/GIT/remotely-workadventure/office rv.tmj",
         "Z:/GIT/remotely-workadventure/outdoor.tsx"
     ],
