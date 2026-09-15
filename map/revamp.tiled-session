@@ -388,6 +388,9 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "Z:/GIT/remotely-workadventure/tileset 2.tsx": {
+            "scaleInDock": 1
+        },
         "Z:/GIT/workadventure bare/map-storage/tests/assets/maps/map.tmj": {
             "scale": 1.5,
             "selectedLayer": 2,
@@ -432,13 +435,14 @@
     ],
     "project": "revamp.tiled-project",
     "recentFiles": [
+        "Z:/GIT/remotely-workadventure/tileset 1.tsx",
         "Z:/GIT/remotely-workadventure/office3.tmj",
         "Z:/GIT/RPH/WA/office2.tmj",
         "Z:/GIT/remotely-workadventure/office.tmj",
         "Z:/GIT/remotely-workadventure/office rv.tmj",
-        "Z:/GIT/remotely-workadventure/outdoor.tsx",
-        "Z:/GIT/remotely-workadventure/tileset 1.tsx"
+        "Z:/GIT/remotely-workadventure/outdoor.tsx"
     ],
+    "tileset.embedInMap": true,
     "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx"
 }
