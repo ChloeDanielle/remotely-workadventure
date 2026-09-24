@@ -1,10 +1,14 @@
 {
-    "activeFile": "",
+    "activeFile": "Z:/GIT/remotely-workadventure/office.tmj",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "../map1.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -189,8 +193,8 @@
             "scale": 1.4361328125,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 384.0174078607371,
-                "y": 132.29974160206717
+                "x": 321.0009519923841,
+                "y": 223.86508907928737
             }
         },
         "Z:/GIT/remotely-workadventure/conference.tmj#WA_Decoration": {
@@ -296,14 +300,19 @@
         },
         "Z:/GIT/remotely-workadventure/office.tmj": {
             "expandedGroupLayers": [
+                52,
                 54,
-                52
+                55,
+                51
             ],
-            "scale": 0.5,
-            "selectedLayer": 6,
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 1.5,
+            "selectedLayer": 12,
             "viewCenter": {
-                "x": 2023,
-                "y": 698
+                "x": 1120,
+                "y": 800.3333333333333
             }
         },
         "Z:/GIT/remotely-workadventure/office.tmj#Assets": {
@@ -316,7 +325,8 @@
             "scaleInDock": 1
         },
         "Z:/GIT/remotely-workadventure/office.tmj#Banner2": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "Z:/GIT/remotely-workadventure/office.tmj#Banners": {
             "scaleInDock": 1
@@ -435,6 +445,10 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "Z:/GIT/remotely-workadventure/outdoor1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "Z:/GIT/remotely-workadventure/tileset 1.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -446,8 +460,8 @@
             "scale": 1.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 671.6666666666666,
-                "y": 600
+                "x": 480.3333333333333,
+                "y": 479.66666666666663
             }
         },
         "Z:/GIT/workadventure bare/map-storage/tests/assets/maps/map.tmj#tileset1": {
@@ -457,8 +471,8 @@
             "scale": 1.111844758064516,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 496.0224851534521,
-                "y": 271.62065370143705
+                "x": 379.09968720250237,
+                "y": 272.0703567704792
             }
         },
         "Z:/GIT/workadventure bare/maps/starter/map.json#Special_Zones": {
@@ -478,15 +492,25 @@
         }
     },
     "last.externalTilesetPath": "Z:/GIT/remotely-workadventure",
-    "last.imagePath": "Z:/GIT/remotely-workadventure",
+    "last.imagePath": "Z:/GIT/remotely-workadventure/tilesets",
     "map.fixedSize": false,
     "map.lastUsedFormat": "json",
     "map.layerDataFormat": "3",
     "openFiles": [
+        "Z:/GIT/workadventure bare/map-storage/tests/assets/maps/map.tmj",
+        "Z:/GIT/workadventure bare/maps/starter/map.json",
+        "../map1.tsx",
+        "Z:/GIT/remotely-workadventure/conference.tmj",
+        "Z:/GIT/remotely-workadventure/office.tmj"
     ],
     "project": "revamp.tiled-project",
     "recentFiles": [
+        "Z:/GIT/workadventure bare/map-storage/tests/assets/maps/map.tmj",
+        "Z:/GIT/workadventure bare/maps/starter/map.json",
+        "../map1.tsx",
+        "Z:/GIT/remotely-workadventure/conference.tmj",
         "Z:/GIT/remotely-workadventure/office.tmj",
+        "Z:/GIT/remotely-workadventure/outdoor1.tsx",
         "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj",
         "Z:/GIT/remotely-workadventure/tileset 1.tsx",
         "Z:/GIT/remotely-workadventure/office3.tmj",
