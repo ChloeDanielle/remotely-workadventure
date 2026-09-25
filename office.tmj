@@ -802,11 +802,11 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"Press SPACE or touch here to open a custom website"
+                         "value":"Press SPACE or touch here to open"
                         }],
                  "rotation":0,
                  "type":"area",
-                 "visible":true,
+                 "visible":false,
                  "width":58.1666666666666,
                  "x":529,
                  "y":892.027183333333
