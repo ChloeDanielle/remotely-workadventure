@@ -662,7 +662,7 @@
                  "y":538.333333333333
                 }, 
                 {
-                 "height":41,
+                 "height":59,
                  "id":18,
                  "name":"to-conference",
                  "opacity":1,
@@ -675,9 +675,9 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":188,
-                 "x":33,
-                 "y":1118
+                 "width":59,
+                 "x":5,
+                 "y":1184
                 }, 
                 {
                  "height":32,
