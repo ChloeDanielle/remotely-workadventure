@@ -790,23 +790,23 @@
                          "value":true
                         }, 
                         {
-                         "name":"openWebsite",
+                         "name":"openTab",
                          "type":"string",
                          "value":"https:\/\/remotelyphilippines.sharepoint.com\/sites\/RemotelyHub2\/SitePages\/Home.aspx"
                         }, 
                         {
-                         "name":"openWebsiteTrigger",
+                         "name":"openTabTrigger",
                          "type":"string",
                          "value":"onaction"
                         }, 
                         {
-                         "name":"openWebsiteTriggerMessage",
+                         "name":"openTabTriggerMessage",
                          "type":"string",
-                         "value":"Press SPACE or touch here to open"
+                         "value":"Press SPACE or touch here to open RemotelyHub"
                         }],
                  "rotation":0,
                  "type":"area",
-                 "visible":false,
+                 "visible":true,
                  "width":58.1666666666666,
                  "x":529,
                  "y":892.027183333333
