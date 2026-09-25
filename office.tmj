@@ -792,7 +792,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/ahora-hris.com\/Remotelyph"
+                         "value":"https:\/\/ahora-hris.com\/RemotelyPh\/Account\/Login?ReturnUrl=%2fRemotelyph"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
