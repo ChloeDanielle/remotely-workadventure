@@ -300,19 +300,19 @@
         },
         "Z:/GIT/remotely-workadventure/office.tmj": {
             "expandedGroupLayers": [
-                52,
-                54,
                 55,
-                51
+                51,
+                54,
+                52
             ],
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 1.5,
-            "selectedLayer": 12,
+            "scale": 0.33,
+            "selectedLayer": 10,
             "viewCenter": {
-                "x": 1120,
-                "y": 800.3333333333333
+                "x": 915.1515151515152,
+                "y": 842.4242424242425
             }
         },
         "Z:/GIT/remotely-workadventure/office.tmj#Assets": {
@@ -322,6 +322,9 @@
             "scaleInDock": 1
         },
         "Z:/GIT/remotely-workadventure/office.tmj#Asssets2": {
+            "scaleInDock": 1
+        },
+        "Z:/GIT/remotely-workadventure/office.tmj#Banner Tileset2": {
             "scaleInDock": 1
         },
         "Z:/GIT/remotely-workadventure/office.tmj#Banner2": {
