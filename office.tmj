@@ -746,9 +746,9 @@
                  "y":34.6666666666667
                 }, 
                 {
-                 "height":157.6123,
+                 "height":136.278966666667,
                  "id":26,
-                 "name":"website",
+                 "name":"website2",
                  "opacity":1,
                  "properties":[
                         {
@@ -759,7 +759,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/remotely-minigame-1aa3e.web.app\/"
+                         "value":"https:\/\/canva.link\/er0ayagg2p3aqdm"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -774,9 +774,9 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":288,
-                 "x":1266,
-                 "y":971.527183333333
+                 "width":121.333333333333,
+                 "x":1226,
+                 "y":968.19385
                 }, 
                 {
                  "height":54.1123,
@@ -932,6 +932,39 @@
                  "width":66.1735785938097,
                  "x":534.694871986234,
                  "y":579.854654989023
+                }, 
+                {
+                 "height":136.279,
+                 "id":40,
+                 "name":"website",
+                 "opacity":1,
+                 "properties":[
+                        {
+                         "name":"dynamic",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":"https:\/\/remotely-minigame-1aa3e.web.app\/"
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"Press SPACE or touch here to open a custom website"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":169.333,
+                 "x":1349.3335,
+                 "y":967.8605
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1072,7 +1105,7 @@
          "y":0
         }],
  "nextlayerid":65,
- "nextobjectid":40,
+ "nextobjectid":41,
  "orientation":"orthogonal",
  "properties":[
         {

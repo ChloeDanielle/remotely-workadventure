@@ -300,19 +300,19 @@
         },
         "Z:/GIT/remotely-workadventure/office.tmj": {
             "expandedGroupLayers": [
-                54,
                 51,
                 52,
-                55
+                55,
+                54
             ],
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 0.33,
+            "scale": 1.5,
             "selectedLayer": 12,
             "viewCenter": {
-                "x": 963.6363636363636,
-                "y": 621.2121212121211
+                "x": 782.6666666666665,
+                "y": 620
             }
         },
         "Z:/GIT/remotely-workadventure/office.tmj#Assets": {
