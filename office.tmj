@@ -759,7 +759,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/cloud.onlinegames.io\/games\/2024\/construct\/219\/stickman-parkour\/index-og.html"
+                         "value":"https:\/\/cdn-factory.marketjs.com\/en\/tunnel-ace\/index.html"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -769,7 +769,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"Press SPACE to play Parkour"
+                         "value":"Press SPACE to play Tunnel Ace"
                         }],
                  "rotation":0,
                  "type":"area",
