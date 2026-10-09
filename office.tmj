@@ -759,7 +759,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/cdn-factory.marketjs.com\/en\/millionaire-quiz-responsive-hd\/index.html"
+                         "value":"https:\/\/gogamesrun.com\/playGame\/memory-challenge"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -769,7 +769,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"Press SPACE to play Millionare Quiz"
+                         "value":"Press SPACE to play Memory Challenge"
                         }],
                  "rotation":0,
                  "type":"area",
