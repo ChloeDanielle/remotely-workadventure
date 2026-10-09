@@ -962,9 +962,42 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":169.333,
-                 "x":1349.3335,
+                 "width":87.333,
+                 "x":1431.3335,
                  "y":967.8605
+                }, 
+                {
+                 "height":136.279,
+                 "id":41,
+                 "name":"website3",
+                 "opacity":1,
+                 "properties":[
+                        {
+                         "name":"dynamic",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":"https:\/\/gogamesrun.com\/playGame\/billiards"
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"Press SPACE to play Billiards"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":80.333,
+                 "x":1350.3335,
+                 "y":966.8605
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1105,7 +1138,7 @@
          "y":0
         }],
  "nextlayerid":65,
- "nextobjectid":41,
+ "nextobjectid":42,
  "orientation":"orthogonal",
  "properties":[
         {
