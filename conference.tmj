@@ -315,8 +315,8 @@
                  "type":"area",
                  "visible":true,
                  "width":96,
-                 "x":256,
-                 "y":96
+                 "x":170.353325173399,
+                 "y":-69.0265197878417
                 }, 
                 {
                  "height":96,
@@ -396,8 +396,8 @@
                  "type":"variable",
                  "visible":true,
                  "width":0,
-                 "x":304.52245019328,
-                 "y":62.873476063039
+                 "x":216.09051764874,
+                 "y":-32.5216007763463
                 }],
          "opacity":1,
          "properties":[
@@ -501,7 +501,7 @@
          "value":"src\/main.ts"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.12.1",
+ "tiledversion":"1.12.2",
  "tileheight":32,
  "tilesets":[
         {
