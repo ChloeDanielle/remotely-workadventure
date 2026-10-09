@@ -759,7 +759,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/cdn-factory.marketjs.com\/en\/tunnel-ace\/index.html"
+                         "value":"https:\/\/cdn-factory.marketjs.com\/en\/millionaire-quiz-responsive-hd\/index.html"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -769,7 +769,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"Press SPACE to play Tunnel Ace"
+                         "value":"Press SPACE to play Millionare Quiz"
                         }],
                  "rotation":0,
                  "type":"area",
