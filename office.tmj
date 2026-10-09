@@ -759,7 +759,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/canva.link\/yyft7x1ahsxyc90"
+                         "value":"<a href=\"https:\/\/www.google.com\/search?si=APenkKlW8VjlOsAuaxBSCMpBWNbYZFJRBAVo4NvMjyEgIpKD1nYzaQNJmje_SEQwbhbrumSRqHQq6Xz3i3MfuwuLS6ZmoX4jLw%3D%3D&amp;hl=en-PH&amp;shem=epsd1%2Cesd2e%2Crimspwouoe%2Csdpie&amp;shndl=21&amp;source=sh%2Fx%2Ffbx%2Fm1%2F1&amp;kgs=f871a47867cc22f8&amp;sei=B9fIavcKgt7BuQ_G6tfJDQ\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"display:block;text-decoration:none;color:inherit;width:100%;max-width:460px;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #dedede;box-shadow:0 1px 4px rgba(0,0,0,0.1);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif\"><div style=\"width:100%;aspect-ratio:16 \/ 9;background:rgba(0,0,0,0.05);overflow:hidden\"><img src=\"https:\/\/www.google.com\/images\/branding\/googleg\/1x\/googleg_standard_color_128dp.png\" alt=\"\" onerror=\"this.onerror=null;this.src='https:\/\/www.google.com\/logos\/doodles\/2026\/space-week-2026-day-3-6753651837111377-m.png';this.style.objectFit='contain';this.style.padding='15%'\" style=\"width:100%;height:100%;object-fit:cover;display:block\" \/><\/div><div style=\"padding:14px 16px;display:flex;flex-direction:column;gap:6px\"><div style=\"display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-height:15px\"><img src=\"https:\/\/www.google.com\/logos\/doodles\/2026\/space-week-2026-day-3-6753651837111377-m.png\" alt=\"\" style=\"width:15px;height:15px;border-radius:4px;flex-shrink:0\" \/><span style=\"font-size:11px;font-weight:400;color:#999999;letter-spacing:0.5px;text-transform:uppercase\">google.com<\/span><\/div><div style=\"font-size:16px;font-weight:400;color:#000000;line-height:1.4;margin:0\">google minesweeper - Google Search<\/div><\/div><\/a>"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -769,7 +769,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"Press SPACE or touch here to open a custom website"
+                         "value":"Press SPACE to play Minesweeper"
                         }],
                  "rotation":0,
                  "type":"area",
