@@ -759,7 +759,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"https:\/\/playhop.com\/app\/464500?utm_source=game_popup_menu"
+                         "value":"https:\/\/cloud.onlinegames.io\/games\/2024\/construct\/219\/stickman-parkour\/index-og.html"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -769,7 +769,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"Press SPACE to play Minesweeper"
+                         "value":"Press SPACE to play Parkour"
                         }],
                  "rotation":0,
                  "type":"area",
