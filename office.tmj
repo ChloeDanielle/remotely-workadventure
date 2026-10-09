@@ -957,7 +957,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"Press SPACE or touch here to open a custom website"
+                         "value":"Press SPACE to Play Build the Office Tower"
                         }],
                  "rotation":0,
                  "type":"area",
