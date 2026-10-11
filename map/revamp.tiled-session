@@ -190,11 +190,15 @@
             "scaleInDock": 1
         },
         "Z:/GIT/remotely-workadventure/conference.tmj": {
+            "expandedObjectLayers": [
+                2,
+                61
+            ],
             "scale": 1.4361328125,
             "selectedLayer": 12,
             "viewCenter": {
-                "x": 304.2894056847545,
-                "y": 39.68992248062011
+                "x": 321.0009519923841,
+                "y": 223.86508907928737
             }
         },
         "Z:/GIT/remotely-workadventure/conference.tmj#WA_Decoration": {
@@ -308,11 +312,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 0.75,
-            "selectedLayer": 13,
+            "scale": 2,
+            "selectedLayer": 12,
             "viewCenter": {
-                "x": 228,
-                "y": 721.3333333333333
+                "x": 1149.5,
+                "y": 494.5
             }
         },
         "Z:/GIT/remotely-workadventure/office.tmj#Assets": {
