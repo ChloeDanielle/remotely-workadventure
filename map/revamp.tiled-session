@@ -1,5 +1,5 @@
 {
-    "activeFile": "Z:/GIT/remotely-workadventure/office.tmj",
+    "activeFile": "Z:/GIT/remotely-workadventure/conference.tmj",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -191,14 +191,14 @@
         },
         "Z:/GIT/remotely-workadventure/conference.tmj": {
             "expandedObjectLayers": [
-                2,
-                61
+                61,
+                2
             ],
             "scale": 1.4361328125,
             "selectedLayer": 12,
             "viewCenter": {
-                "x": 321.0009519923841,
-                "y": 223.86508907928737
+                "x": 321.00095199238405,
+                "y": 39.68992248062011
             }
         },
         "Z:/GIT/remotely-workadventure/conference.tmj#WA_Decoration": {
@@ -304,19 +304,19 @@
         },
         "Z:/GIT/remotely-workadventure/office.tmj": {
             "expandedGroupLayers": [
-                54,
                 51,
-                52,
-                55
+                55,
+                54,
+                52
             ],
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 2,
-            "selectedLayer": 12,
+            "scale": 1,
+            "selectedLayer": 10,
             "viewCenter": {
-                "x": 1149.5,
-                "y": 494.5
+                "x": 1120,
+                "y": 800.5
             }
         },
         "Z:/GIT/remotely-workadventure/office.tmj#Assets": {
@@ -515,8 +515,8 @@
         "Z:/GIT/workadventure bare/map-storage/tests/assets/maps/map.tmj",
         "Z:/GIT/workadventure bare/maps/starter/map.json",
         "../map1.tsx",
-        "Z:/GIT/remotely-workadventure/conference.tmj",
         "Z:/GIT/remotely-workadventure/office.tmj",
+        "Z:/GIT/remotely-workadventure/conference.tmj",
         "Z:/GIT/remotely-workadventure/outdoor1.tsx",
         "Z:/GIT/WA/Remotely-WorkAdventure/office.tmj",
         "Z:/GIT/remotely-workadventure/tileset 1.tsx",
