@@ -191,8 +191,8 @@
         },
         "Z:/GIT/remotely-workadventure/conference.tmj": {
             "expandedObjectLayers": [
-                61,
-                2
+                2,
+                61
             ],
             "scale": 1.4361328125,
             "selectedLayer": 12,
@@ -304,19 +304,19 @@
         },
         "Z:/GIT/remotely-workadventure/office.tmj": {
             "expandedGroupLayers": [
-                51,
                 52,
+                55,
                 54,
-                55
+                51
             ],
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 1,
-            "selectedLayer": 10,
+            "scale": 0.25,
+            "selectedLayer": 14,
             "viewCenter": {
-                "x": 303,
-                "y": 1065
+                "x": 1060,
+                "y": 232
             }
         },
         "Z:/GIT/remotely-workadventure/office.tmj#Assets": {
